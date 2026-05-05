@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  h1 Список пользователей
+
+  a.button(href="/users/create") Создать пользователя
+
+  if users.length
+    table.users-table
+      thead
+        tr
+          th ID
+          th Имя
+          th Email
+          th Действия
+      tbody
+        each user in users
+          tr
+            td= user.id
+            td= user.name
+            td= user.email
+            td.actions
+              a.button.button-small(href=`/users/${user.id}/edit`) Редактировать
+              form.inline-form(method="POST", action=`/users/${user.id}/delete`)
+                button.button.button-small.button-danger(type="submit") Удалить
+  else
+    p Пользователей пока нет.

@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Создание пользователя
+
+  if error
+    p.error= error
+
+  - const formValues = values || {}
+
+  form.form(method="POST", action="/users")
+    label(for="name") Имя
+    input#name(type="text", name="name", value=formValues.name || "", required)
+
+    label(for="email") Email
+    input#email(type="email", name="email", value=formValues.email || "", required)
+
+    button.button(type="submit") Создать
+
+  nav.nav
+    a(href="/users") Вернуться к списку

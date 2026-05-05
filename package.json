@@ -1,0 +1,21 @@
+{
+  "name": "fastify-pug-users-db",
+  "version": "1.0.0",
+  "description": "Третья контрольная работа: Fastify, Pug, fastify-static, SQLite, users CRUD",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "fastify": "^3.29.5",
+    "fastify-static": "^4.7.0",
+    "fastify-formbody": "^5.3.0",
+    "point-of-view": "^5.0.0",
+    "pug": "^3.0.3",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
